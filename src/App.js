@@ -1,10 +1,11 @@
-import Header from "./Header"
+import Header from "./Header";
+import Footer from "./Footer";
 
 function App() {
   return (
     <body class="body">
       <Header
-      title="Kalklator walut"
+        title="Kalklator walut"
       />
       <form class="form js-form">
         <fieldset class="form__fieldset">
@@ -38,9 +39,11 @@ function App() {
           <p>
             <button class="form__button">Przelicz</button>
           </p>
-          <p>Kurs wymiany wg NBP z dnia 2022-11-18</p>
         </fieldset>
       </form>
+      <Footer
+            title="Kalukulator walut by Adrian Jaroszuk"
+          />
     </body>
   );
 }
