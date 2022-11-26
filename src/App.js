@@ -1,8 +1,11 @@
-
+import Header from "./Header"
 
 function App() {
   return (
     <body class="body">
+      <Header
+      title="Kalklator walut"
+      />
       <form class="form js-form">
         <fieldset class="form__fieldset">
           <legend class="form__legend">Kalkulator walutowy</legend>
