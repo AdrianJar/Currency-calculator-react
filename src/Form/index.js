@@ -1,3 +1,4 @@
+import "./style.css"
 import { useState } from "react";
 import { currencies } from "../Currency/index"
 
@@ -12,24 +13,24 @@ const Form = ({ result, calculatedResult, getResult }) => {
         calculatedResult(exchangeAmount, currency);
     };
 
-    const onFormReset = () =>{
+    const onFormReset = () => {
         setExchangeAmount("")
         getResult("")
     };
 
     return (
-        <form
+        <form className="form"
             onSubmit={onFormSubmit}
             onReset={onFormReset}
         >
-            <fieldset>
-                <legend>Kalkulator walutowy</legend>
+            <fieldset className="form__fieldset">
                 <div>
                     <label>
-                        <span>
+                        <span className="form__labelText">
                             Kwota w zł:
                         </span>
                         <input
+                            className="form__input"
                             value={exchangeAmount}
                             onChange={({ target }) => setExchangeAmount(target.value)}
                             placeholder="Wpisz kwotę w zł"
@@ -42,8 +43,11 @@ const Form = ({ result, calculatedResult, getResult }) => {
                 </div>
                 <div>
                     <label>
-                        Wybierz walutę:
+                        <span className="form__labelText">
+                            Wybierz walutę:
+                        </span>
                         <select
+                            className="form__select"
                             name="currency"
                             value={currency}
                             onChange={({ target }) => setCurrency(target.value)}
@@ -59,20 +63,17 @@ const Form = ({ result, calculatedResult, getResult }) => {
                         </select>
                     </label>
                 </div>
-                <div>
-                    Wynik przeliczenia:{result}
+                <div className="form__result">
+                    <div className="form_resultText"><p>Wynik przewalutowania:</p></div>
+                    <div className="form__resultAmount">{result}</div>
                 </div>
-                <div>
-                    <button>Przelicz</button>
-                    <button
-                    type="reset"
-                    >
-                        Reset
-                        </button>
+                <div className="form__buttons">
+                    <button className="form__button">Przelicz</button>
+                    <button className="form__button" type="reset">Reset</button>
                 </div>
             </fieldset>
         </form>
     )
-    };
+};
 
-    export default Form;
+export default Form;
