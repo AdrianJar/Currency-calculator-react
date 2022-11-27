@@ -1,7 +1,7 @@
-
+import "./style.css"
 
 const Footer = ({ title }) => (
-    <footer>
+    <footer className="footer">
         {title}
     </footer>
 );
