@@ -33,7 +33,7 @@ This web APP is a part of my Frontend Dev course in which I participate.
 
 ## 👀Preview 
 
-Inserting exchange value
+<p style="text-align: center;">## Inserting exchange value</p>
 ![Inserting exchange Value ](https://github.com/AdrianJar/calculator-react-v2/blob/master/Preview/1_exchangeValuePreview.gif)
 Choosing currency
 ![Choosing currency](https://github.com/AdrianJar/calculator-react-v2/blob/master/Preview/2_choosingCurrencyPreview.gif)
