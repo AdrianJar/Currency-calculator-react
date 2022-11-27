@@ -1,8 +1,8 @@
-
+import "./style.css"
 
 const Header = ({title}) => (
     <header>
-       <h1>{title}</h1>
+       <h1 className="header">{title}</h1>
     </header>
 );
 
