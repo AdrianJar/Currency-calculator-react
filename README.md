@@ -1,4 +1,56 @@
-# Getting Started with Create React App
+# 📂 Currency calculator - kalkulator walut 
+This is a *Currency calculatort* project. 
+
+## 📑 Table of contents:
+
+1. [🎮 Demo](#demo)
+1. [📖 Description](#description)
+2. [👀 Preview](#preview)
+3. [🛠 Technologies](#technologies)
+
+## 🎮Demo
+
+You can find a demo version of this project [link here](https://adrianjar.github.io/calculator-react-v2/).
+
+## 📖Description 
+
+Hello everyone, I’d like to show you my "Currency calculator" application.
+
+So „Currency calculator" is a web application which allows you to calulate how much money in ZŁ is worth at 3 currencies: 
+1. USD
+2. EURO
+3. GBP
+
+My web applications contains of 1 input 1 select and 2 buttons which are responsible for:
+
+-  Input is responsible inserting amount in zł currency which we want to transfer. 
+-  Select is responsible for choosing to which currency we want to calculate our amount. You can choose from 3 which are mentioned before.
+-  "Przelicz" Button is responsible for calculating amount of money in zł to one which you choose.
+-  "Reset" Button is responsilbe for restarting APP to it's starting position. Resets input, currency and value.
+
+This web APP is a part of my Frontend Dev course in which I participate.
+
+
+## 👀Preview 
+
+![Inserting exchange Value ](https://github.com/AdrianJar/calculator-react-v2/blob/master/Preview/1_exchangeValuePreview.gif)
+![Choosing currency](https://github.com/AdrianJar/calculator-react-v2/blob/master/Preview/2_choosingCurrencyPreview.gif)
+![Calculating result](https://github.com/AdrianJar/calculator-react-v2/blob/master/Preview/3_calculatePreview.gif)
+![Reset button](https://github.com/AdrianJar/calculator-react-v2/blob/master/Preview/4_resetPreview.gif)
+
+## 🛠Technologies
+
+- HTML
+- CSS
+- JavaScript
+- Flex
+- Grid
+- BEM
+- Markdown
+- Node.js
+- React
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -34,32 +86,6 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+#
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
