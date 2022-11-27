@@ -9,8 +9,10 @@ html {
 }
 
 body {
+  max-width:1000px;
   font-family: "Montserrat", sans-serif;
   background-color: #eee;
   padding: 20px;
   margin: 10px auto;
+  background-image: url(/src/Images/dolars.jpeg)
 }

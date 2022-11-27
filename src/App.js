@@ -22,6 +22,7 @@ function App() {
       />
       <Form
         calculatedResult={calculatedResult}
+        getResult={getResult}
         result={result}
       />
       <Footer
