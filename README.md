@@ -33,13 +33,20 @@ This web APP is a part of my Frontend Dev course in which I participate.
 
 ## 👀Preview 
 
-<p style="text-align: center;">## Inserting exchange value</p>
+Inserting exchange value
+
 ![Inserting exchange Value ](https://github.com/AdrianJar/calculator-react-v2/blob/master/Preview/1_exchangeValuePreview.gif)
+
 Choosing currency
+
 ![Choosing currency](https://github.com/AdrianJar/calculator-react-v2/blob/master/Preview/2_choosingCurrencyPreview.gif)
+
 Calculating result
+
 ![Calculating result](https://github.com/AdrianJar/calculator-react-v2/blob/master/Preview/3_calculatePreview.gif)
+
 Reset button
+
 ![Reset button](https://github.com/AdrianJar/calculator-react-v2/blob/master/Preview/4_resetPreview.gif)
 
 ## 🛠Technologies
