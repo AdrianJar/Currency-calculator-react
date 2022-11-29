@@ -83,6 +83,7 @@
   padding: 10px;
   border-radius: 5px;
   transition: 1s;
+  cursor: pointer;
 }
 
 @media (max-width: 767px) {
