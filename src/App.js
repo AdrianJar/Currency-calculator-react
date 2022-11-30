@@ -2,15 +2,14 @@ import Header from "./Header";
 import Footer from "./Footer";
 import Form from "./Form";
 import Container from "./Container";
-import { currencies } from "./Currency"
+import { currencies } from "./currency"
 import { useState } from "react";
 
 function App() {
   const [result, getResult] = useState();
 
   const calculatedResult = (exchangeAmount, currency) => {
-    const exchangeRate = currencies.find(({ short }) => short === currency).rate;
-    const short = currencies.find(({ short }) => short === currency).short;
+    const { rate: exchangeRate, short } = currencies.find(({ short }) => short === currency);
 
     getResult((exchangeAmount / exchangeRate).toFixed(2) + short);
   };
