@@ -1,37 +1,23 @@
-import "./style.css"
-import { useEffect, useState } from "react";
+import "./style.css";
+import { CurrentTime } from "./currentTime";
 
-const CurrentTime = () => {
-    const startTime = new Date();
-    const formatedDate = startTime.toLocaleDateString(
-        undefined,
-        {
-            month: "long",
-            weekday: "long",
-            day: "numeric",
-            year: "numeric",
-            hour: "2-digit",
-            minute: "2-digit",
-            second: "2-digit"
-        },
-    )
+const Time = () => {
+    const time = CurrentTime();
 
-
-    const [time, getTime] = useState(formatedDate);
-
-    useEffect(() => {
-        setInterval(() => {
-            
-        }, 1000);
+    const formatedTime = time.toLocaleDateString(undefined, {
+        day: "numeric",
+        month: "long",
+        year: "numeric",
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit"
     });
 
-
-
     return (
-        <div>
-            {time}
-        </div>
+        <p>
+            <>Dzisiaj jest:{formatedTime}</>
+        </p>
     );
 };
 
-export default CurrentTime;
+export default Time;

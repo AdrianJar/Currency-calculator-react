@@ -2,9 +2,9 @@ import Header from "./Header";
 import Footer from "./Footer";
 import Form from "./Form";
 import Container from "./Container";
-import CurrentTime from "./Clock";
 import { currencies } from "./currency"
 import { useState } from "react";
+import Time from "./Clock";
 
 function App() {
   const [result, getResult] = useState();
@@ -17,10 +17,10 @@ function App() {
 
   return (
     <Container>
-      <CurrentTime/>
       <Header
         title="Kalklator walut"
       />
+      <Time />
       <Form
         calculatedResult={calculatedResult}
         getResult={getResult}
