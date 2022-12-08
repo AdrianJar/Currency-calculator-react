@@ -14,8 +14,8 @@ const Time = () => {
     });
 
     return (
-        <p>
-            <>Dzisiaj jest:{formatedTime}</>
+        <p className="clock">
+            <>Dziś jest: {formatedTime}</>
         </p>
     );
 };
