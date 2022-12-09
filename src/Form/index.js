@@ -1,6 +1,7 @@
 import "./style.css"
 import { useState } from "react";
 import { currencies } from "../currency/index"
+import Footer from "../Footer";
 
 const Form = ({ result, calculatedResult, getResult }) => {
 
@@ -27,7 +28,7 @@ const Form = ({ result, calculatedResult, getResult }) => {
                 <div>
                     <label>
                         <span className="form__labelText">
-                            Kwota w zł:
+                            Kwota w zł:*
                         </span>
                         <input
                             className="form__input"
@@ -44,7 +45,7 @@ const Form = ({ result, calculatedResult, getResult }) => {
                 <div>
                     <label>
                         <span className="form__labelText">
-                            Wybierz walutę:
+                            Wybierz walutę:*
                         </span>
                         <select
                             className="form__select"
@@ -71,7 +72,11 @@ const Form = ({ result, calculatedResult, getResult }) => {
                     <button className="form__button">Przelicz</button>
                     <button className="form__button" type="reset">Reset</button>
                 </div>
+                <Footer
+                    title="Pola oznaczone * są wymagane"
+                />
             </fieldset>
+
         </form>
     )
 };
