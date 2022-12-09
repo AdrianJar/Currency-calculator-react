@@ -5,6 +5,7 @@ const Time = () => {
     const time = CurrentTime();
 
     const formatedTime = time.toLocaleDateString(undefined, {
+        weekday: "long",
         day: "numeric",
         month: "long",
         year: "numeric",
@@ -15,7 +16,7 @@ const Time = () => {
 
     return (
         <p className="clock">
-            <>Dziś jest: {formatedTime}</>
+            <>Dzisiaj jest {formatedTime}</>
         </p>
     );
 };
