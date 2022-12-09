@@ -2,9 +2,9 @@ import "./style.css";
 import { CurrentTime } from "./currentTime";
 
 const Time = () => {
-    const time = CurrentTime();
+    const date = CurrentTime();
 
-    const formatedTime = time.toLocaleDateString(undefined, {
+    const formatedDate = date.toLocaleDateString(undefined, {
         weekday: "long",
         day: "numeric",
         month: "long",
@@ -16,7 +16,7 @@ const Time = () => {
 
     return (
         <p className="clock">
-            <>Dzisiaj jest {formatedTime}</>
+            <>Dzisiaj jest {formatedDate}</>
         </p>
     );
 };
