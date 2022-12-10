@@ -1,5 +1,5 @@
 import "./style.css";
-import { CurrentTime } from "./currentTime";
+import { CurrentTime } from "./currentTime.js";
 
 const Time = () => {
     const date = CurrentTime();
