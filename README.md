@@ -60,6 +60,11 @@ Reset button
 - Markdown
 - Node.js
 - React
+- Styled-components
+- create-react-app
+- React Hooks (custom hooks)
+
+
 
 ## Getting Started with Create React App
 
