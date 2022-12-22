@@ -2,9 +2,9 @@ import { createGlobalStyle } from "styled-components";
 import dolars from "./images/dolars.jpeg"
 
 export const GlobalStyle = createGlobalStyle`
-    html {
-        box-sizing: border-box;
-    }
+html {
+    box-sizing: border-box;
+}
 
 *, 
 ::after,
@@ -19,5 +19,4 @@ body {
     margin: 10px auto;
     background-image: url("${dolars}");
 }
-
 `;
