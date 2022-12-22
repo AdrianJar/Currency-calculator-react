@@ -1,7 +1,7 @@
-import "./style.css"
 import { useState } from "react";
 import { currencies } from "../currency/index.js"
 import Footer from "../Footer";
+import { StyledForm, Fieldset, LabelContent, Input, Select, FormResult, FormResultText, FormResultAmount, ButtonsContainer, Button } from "./styled";
 
 const Form = ({ result, calculatedResult, getResult }) => {
 
@@ -20,18 +20,17 @@ const Form = ({ result, calculatedResult, getResult }) => {
     };
 
     return (
-        <form className="form"
+        <StyledForm
             onSubmit={onFormSubmit}
             onReset={onFormReset}
         >
-            <fieldset className="form__fieldset">
+            <Fieldset>
                 <div>
                     <label>
-                        <span className="form__labelText">
+                        <LabelContent>
                             Kwota w zł:*
-                        </span>
-                        <input
-                            className="form__input"
+                        </LabelContent>
+                        <Input
                             value={exchangeAmount}
                             onChange={({ target }) => setExchangeAmount(target.value)}
                             placeholder="Wpisz kwotę w zł"
@@ -44,11 +43,10 @@ const Form = ({ result, calculatedResult, getResult }) => {
                 </div>
                 <div>
                     <label>
-                        <span className="form__labelText">
+                        <LabelContent>
                             Wybierz walutę:*
-                        </span>
-                        <select
-                            className="form__select"
+                        </LabelContent>
+                        <Select
                             name="currency"
                             value={currency}
                             onChange={({ target }) => setCurrency(target.value)}
@@ -61,23 +59,22 @@ const Form = ({ result, calculatedResult, getResult }) => {
                                     {currency.name}
                                 </option>
                             ))};
-                        </select>
+                        </Select>
                     </label>
                 </div>
-                <div className="form__result">
-                    <div className="form_resultText"><p>Wynik przewalutowania:</p></div>
-                    <div className="form__resultAmount">{result}</div>
-                </div>
-                <div className="form__buttons">
-                    <button className="form__button">Przelicz</button>
-                    <button className="form__button" type="reset">Reset</button>
-                </div>
+                <FormResult>
+                    <FormResultText><p>Wynik przewalutowania:</p></FormResultText>
+                    <FormResultAmount>{result}</FormResultAmount>
+                </FormResult>
+                <ButtonsContainer>
+                    <Button>Przelicz</Button>
+                    <Button type="reset">Reset</Button>
+                </ButtonsContainer>
                 <Footer
                     title="Pola oznaczone * są wymagane"
                 />
-            </fieldset>
-
-        </form>
+            </Fieldset>
+        </StyledForm>
     )
 };
 
