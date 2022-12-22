@@ -1,8 +1,8 @@
-import "./style.css";
-import { CurrentTime } from "./currentTime.js";
+import { useCurrentTime } from "./useCurrentTime.js";
+import { StyledClock } from "./styled.js";
 
 const Time = () => {
-    const date = CurrentTime();
+    const date = useCurrentTime();
 
     const formatedDate = date.toLocaleDateString(undefined, {
         weekday: "long",
@@ -15,9 +15,9 @@ const Time = () => {
     });
 
     return (
-        <p className="clock">
+        <StyledClock>
             <>Dzisiaj jest {formatedDate}</>
-        </p>
+        </StyledClock>
     );
 };
 
