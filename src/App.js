@@ -2,7 +2,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 import Form from "./Form";
 import Container from "./Container";
-import { currencies } from "./currency"
+import { currencies } from "./assets/currency"
 import { useState } from "react";
 import Time from "./Clock";
 

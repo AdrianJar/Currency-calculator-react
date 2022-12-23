@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { currencies } from "../currency/index.js"
+import { currencies } from "../assets/currency";
 import Footer from "../Footer";
 import { StyledForm, Fieldset, LabelContent, Input, Select, FormResult, FormResultText, FormResultAmount, ButtonsContainer, Button } from "./styled";
 
