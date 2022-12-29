@@ -6,9 +6,7 @@ import { currencies } from "./assets/currency"
 import { useState } from "react";
 import Time from "./Clock";
 
-
 function App() {
-
 
   const [result, getResult] = useState();
 

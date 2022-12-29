@@ -1,8 +1,8 @@
-export const waluta = (
-    fetch("https://api.exchangerate.host/latest?base=PLN&symbols=USD,EUR,GBP")
-        .then(response => response.json())
-        .then(products => console.log(products))
-        .catch(error => console.error("coś poszło nie tak...!!!", error)));
+import axios from "axios";
+
+    axios.get("https://api.exchangerate.host/latest?base=PLN&symbols=USD,EUR,GBP")
+        .then(response => console.log(response.data))
+        .catch(error => console.error("coś poszło nie tak...!!!", error));
 
 export const currencies = [
     {
