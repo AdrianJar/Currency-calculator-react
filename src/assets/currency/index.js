@@ -1,8 +1,29 @@
 import axios from "axios";
 
-    axios.get("https://api.exchangerate.host/latest?base=PLN&symbols=USD,EUR,GBP")
-        .then(response => console.log(response.data))
-        .catch(error => console.error("coś poszło nie tak...!!!", error));
+const getData = async () => {
+    try {
+        const exchangeRatesURL = "https://api.exchangerate.host/latest?base=PLN&symbols=USD,EUR,GBP";
+
+        const response = await axios.get(exchangeRatesURL)
+        console.log(response.data);
+    } catch (error) {
+        console.error("coś poszło nie tak...!!!", error)
+    }
+};
+
+
+getData();
+
+
+
+
+
+
+
+
+
+
+
 
 export const currencies = [
     {
