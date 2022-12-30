@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components";
-import dolars from "./assets/images/dolars.jpeg"
+import dolars from "./assets/dolars.jpeg"
 
 export const GlobalStyle = createGlobalStyle`
 html {
