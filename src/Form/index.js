@@ -1,28 +1,43 @@
 import { useState } from "react";
-import { currencies } from "../assets/currency";
+import { useRatesData } from "./useRatesData";
 import Footer from "../Footer";
-import { StyledForm, Fieldset, LabelContent, Input, Select, FormResult, FormResultText, FormResultAmount, ButtonsContainer, Button } from "./styled";
+import {
+    StyledForm,
+    Fieldset,
+    LabelContent,
+    Input,
+    Select,
+    FormResult,
+    FormResultText,
+    FormResultAmount,
+    ButtonsContainer,
+    Button
+} from "./styled";
 
-const Form = ({ result, calculatedResult, getResult }) => {
-
-    const [exchangeAmount, setExchangeAmount] = useState("");
-
+const Form = () => {
+    const [amount, setAmount] = useState("");
     const [currency, setCurrency] = useState("USD");
+    const [result, setResult] = useState("");
+    const ratesData = useRatesData();
 
     const onFormSubmit = (event) => {
         event.preventDefault();
-        calculatedResult(exchangeAmount, currency);
+        calculateResult(currency, amount);
     };
 
-    const onFormReset = () => {
-        setExchangeAmount("")
-        getResult("")
+    const calculateResult = (amount, currency) => {
+        const exchangeRate = ratesData.rates[currency];
+
+        setResult({
+            sourceAmount: +amount,
+            targetAmount: +amount * exchangeRate,
+            currency,
+        });
     };
 
     return (
         <StyledForm
             onSubmit={onFormSubmit}
-            onReset={onFormReset}
         >
             <Fieldset>
                 <div>
@@ -31,8 +46,8 @@ const Form = ({ result, calculatedResult, getResult }) => {
                             Kwota w zł:*
                         </LabelContent>
                         <Input
-                            value={exchangeAmount}
-                            onChange={({ target }) => setExchangeAmount(target.value)}
+                            value={amount}
+                            onChange={({ target }) => setAmount(target.value)}
                             placeholder="Wpisz kwotę w zł"
                             type="number"
                             min="0.01"
@@ -51,14 +66,14 @@ const Form = ({ result, calculatedResult, getResult }) => {
                             value={currency}
                             onChange={({ target }) => setCurrency(target.value)}
                         >
-                            {currencies.map(currency => (
+                            {Object.keys(ratesData.rates).map(currency => (
                                 <option
-                                    key={currency.id}
-                                    value={currency.short}
+                                    key={currency}
+                                    value={currency}
                                 >
-                                    {currency.name}
+                                    {currency}
                                 </option>
-                            ))};
+                            ))}
                         </Select>
                     </label>
                 </div>
