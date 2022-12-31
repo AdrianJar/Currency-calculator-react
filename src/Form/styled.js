@@ -96,3 +96,11 @@ export const Button = styled.button`
         max-width: 500px;
     }
 `;
+
+export const Loading = styled.p`
+    color: ${({ theme }) => theme.color.forest_green};
+`;
+
+export const Failure = styled.p`
+    color: ${({ theme }) => theme.color.monza};
+`;
