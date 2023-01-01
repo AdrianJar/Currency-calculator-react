@@ -38,31 +38,31 @@ This web APP is a part of my Frontend Dev course in which I participate.
 
 Loading
 
-![Loading](https://github.com/AdrianJar/calculator-react-v2/blob/master/Preview/4_resetPreview.gif)
+![Loading](https://github.com/AdrianJar/calculator-react-v2/blob/master/preview/1_loading.gif)
 
 Loading failure
 
-![Loading failuer](https://github.com/AdrianJar/calculator-react-v2/blob/master/Preview/4_resetPreview.gif)
+![Loading failuer](https://github.com/AdrianJar/calculator-react-v2/blob/master/preview/2_failure.gif)
 
 Inserting exchange value
 
-![Inserting exchange Value ](https://github.com/AdrianJar/calculator-react-v2/blob/master/Preview/1_exchangeValuePreview.gif)
+![Inserting exchange Value ](https://github.com/AdrianJar/calculator-react-v2/blob/master/preview/3_inserting_amount.gif)
 
 Choosing currency
 
-![Choosing currency](https://github.com/AdrianJar/calculator-react-v2/blob/master/Preview/2_choosingCurrencyPreview.gif)
+![Choosing currency](https://github.com/AdrianJar/calculator-react-v2/blob/master/preview/4_choosing_currency.gif)
 
 Calculating result
 
-![Calculating result](https://github.com/AdrianJar/calculator-react-v2/blob/master/Preview/3_calculatePreview.gif)
+![Calculating result](https://github.com/AdrianJar/calculator-react-v2/blob/master/preview/5_calculating_result.gif)
 
 Required input
 
-![Required input](https://github.com/AdrianJar/calculator-react-v2/blob/master/Preview/4_resetPreview.gif)
+![Required input](https://github.com/AdrianJar/calculator-react-v2/blob/master/preview/6_required_input.gif)
 
 Responsivnes
 
-![Responsivnes](https://github.com/AdrianJar/calculator-react-v2/blob/master/Preview/4_resetPreview.gif)
+![Responsivnes](https://github.com/AdrianJar/calculator-react-v2/blob/master/preview/7_responsivenes.gif)
 
 ## 🛠Technologies
 
