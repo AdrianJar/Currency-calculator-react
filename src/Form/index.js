@@ -1,6 +1,9 @@
 import { useState } from "react";
 import { useRatesData } from "./useRatesData";
 import Footer from "../Footer";
+import Info from "../Info";
+import LoadAnimation from "./LoadAnimation";
+import { Result } from "./Result";
 import {
     StyledForm,
     Fieldset,
@@ -16,23 +19,26 @@ import {
     Failure,
 } from "./styled";
 
+
 const Form = () => {
     const [amount, setAmount] = useState("");
-    const [currency, setCurrency] = useState("USD");
-    const [result, setResult] = useState("");
+    const [currency, setCurrency] = useState("EUR");
+    const [result, setResult] = useState();
     const ratesData = useRatesData();
+    const { rates, date, status } = ratesData;
 
     const onFormSubmit = (event) => {
         event.preventDefault();
-        calculateResult(currency, amount);
+        calculateResult(amount, currency);
+        console.log(result)
     };
 
     const calculateResult = (amount, currency) => {
-        const exchangeRate = ratesData.rates[currency];
+        const exchangeRate = rates[currency];
 
         setResult({
             sourceAmount: +amount,
-            targetAmount: +amount * exchangeRate,
+            targetAmount: amount * exchangeRate,
             currency,
         });
     };
@@ -41,16 +47,23 @@ const Form = () => {
         <StyledForm
             onSubmit={onFormSubmit}
         >
-            {ratesData.status === "loading"
+            {status === "loading"
                 ? (
                     <Loading>
-                        Poczekaj chwilę dane są ładowane
+                        <LoadAnimation></LoadAnimation>
+                        Poczekaj chwilę dane są ładowane z Europejskiego Banku Centralnego
                     </Loading>
                 )
                 :
-                (ratesData.status === "error" ? (
+                (status === "error" ? (
                     <Failure>
                         Ups... Coś poszło nie tak...
+                        <br />
+                        Sprawdź swoje połączenie z internetem.
+                        <br />
+                        Jeśli Twoje połączenie z internetem jest stabilne, spróbuj ponownie później.
+                        <br />
+                        Przepraszam za problemy.
                     </Failure>
                 )
                     :
@@ -81,7 +94,7 @@ const Form = () => {
                                     value={currency}
                                     onChange={({ target }) => setCurrency(target.value)}
                                 >
-                                    {Object.keys(ratesData.rates).map(currency => (
+                                    {Object.keys(rates).map(currency => (
                                         <option
                                             key={currency}
                                             value={currency}
@@ -93,13 +106,21 @@ const Form = () => {
                             </label>
                         </div>
                         <FormResult>
-                            <FormResultText><p>Wynik przewalutowania:</p></FormResultText>
-                            <FormResultAmount>{result}</FormResultAmount>
+                            <FormResultText>
+                                <p>Wynik przewalutowania:</p>
+                            </FormResultText>
+                            <FormResultAmount>
+                                <Result
+                                    result={result}
+                                />
+                            </FormResultAmount>
                         </FormResult>
                         <ButtonsContainer>
                             <Button>Przelicz</Button>
-                            <Button type="reset">Reset</Button>
                         </ButtonsContainer>
+                        <Info
+                            date={date}
+                        />
                         <Footer
                             title="Pola oznaczone * są wymagane"
                         />
