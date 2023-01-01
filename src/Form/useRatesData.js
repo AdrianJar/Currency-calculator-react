@@ -13,7 +13,6 @@ export const useRatesData = () => {
                 const exchangeRatesURL = "https://api.exchangerate.host/latest?base=PLN&symbols=USD,EUR,GBP,";
                 const response = await axios.get(exchangeRatesURL)
 
-                console.log(response)
                 setRatesData({
                     date: response.data.date,
                     rates: response.data.rates,
