@@ -35,6 +35,15 @@ This web APP is a part of my Frontend Dev course in which I participate.
 
 ## 👀Preview 
 
+
+Loading
+
+![Loading](https://github.com/AdrianJar/calculator-react-v2/blob/master/Preview/4_resetPreview.gif)
+
+Loading failure
+
+![Loading failuer](https://github.com/AdrianJar/calculator-react-v2/blob/master/Preview/4_resetPreview.gif)
+
 Inserting exchange value
 
 ![Inserting exchange Value ](https://github.com/AdrianJar/calculator-react-v2/blob/master/Preview/1_exchangeValuePreview.gif)
@@ -47,9 +56,13 @@ Calculating result
 
 ![Calculating result](https://github.com/AdrianJar/calculator-react-v2/blob/master/Preview/3_calculatePreview.gif)
 
-Reset button
+Required input
 
-![Reset button](https://github.com/AdrianJar/calculator-react-v2/blob/master/Preview/4_resetPreview.gif)
+![Required input](https://github.com/AdrianJar/calculator-react-v2/blob/master/Preview/4_resetPreview.gif)
+
+Responsivnes
+
+![Responsivnes](https://github.com/AdrianJar/calculator-react-v2/blob/master/Preview/4_resetPreview.gif)
 
 ## 🛠Technologies
 
