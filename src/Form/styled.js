@@ -98,9 +98,19 @@ export const Button = styled.button`
 `;
 
 export const Loading = styled.p`
-    color: ${({ theme }) => theme.color.forest_green};
+    text-align: center;
+    color: ${({ theme }) => theme.color.teal};
+    padding: 50px;
 `;
 
 export const Failure = styled.p`
+    text-align: center;
     color: ${({ theme }) => theme.color.monza};
+    padding: 50px 10px;
+`;
+
+export const StyledResult = styled.div`
+    text-align: center;
+    margin: 0;
+    padding: 0 0 10px;
 `;
