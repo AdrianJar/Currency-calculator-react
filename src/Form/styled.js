@@ -97,13 +97,13 @@ export const Button = styled.button`
     }
 `;
 
-export const Loading = styled.p`
+export const Loading = styled.div`
     text-align: center;
     color: ${({ theme }) => theme.color.teal};
     padding: 50px;
 `;
 
-export const Failure = styled.p`
+export const Failure = styled.div`
     text-align: center;
     color: ${({ theme }) => theme.color.monza};
     padding: 50px 10px;
