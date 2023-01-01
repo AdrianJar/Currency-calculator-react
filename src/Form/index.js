@@ -30,7 +30,6 @@ const Form = () => {
     const onFormSubmit = (event) => {
         event.preventDefault();
         calculateResult(amount, currency);
-        console.log(result)
     };
 
     const calculateResult = (amount, currency) => {
@@ -51,7 +50,7 @@ const Form = () => {
                 ? (
                     <Loading>
                         <LoadAnimation></LoadAnimation>
-                        Poczekaj chwilę dane są ładowane z Europejskiego Banku Centralnego
+                        Poczekaj chwilę dane są ładowane z Europejskiego Banku Centralnego.
                     </Loading>
                 )
                 :
