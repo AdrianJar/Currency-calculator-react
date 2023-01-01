@@ -14,19 +14,21 @@ You can find a demo version of this project [link here](https://adrianjar.github
 
 ## 📖Description 
 
-Hello everyone, I’d like to show you my "Currency calculator" application.
+Hello everyone, I’d like to show you my "Currency calculator" application. Exchange rates are downloaded from European Central Bank, so that we have all rates up to date! 
+
+After recent update of my App I've added as mantioned before downloading by API (axios) data of rates and date from when rates are. 
+There has been added Loading screen with loading animation and in case of failure of fetching data from API I've added failure message.
 
 So „Currency calculator" is a web application which allows you to calulate how much money in ZŁ is worth at 3 currencies: 
 1. USD
 2. EURO
 3. GBP
 
-My web applications contains of 1 input 1 select and 2 buttons which are responsible for:
+My web applications contains of input, select and button which are responsible for:
 
 -  Input is responsible inserting amount in zł currency which we want to transfer. 
 -  Select is responsible for choosing to which currency we want to calculate our amount. You can choose from 3 which are mentioned before.
 -  "Przelicz" Button is responsible for calculating amount of money in zł to one which you choose.
--  "Reset" Button is responsilbe for restarting APP to it's starting position. Resets input, currency and value.
 
 This web APP is a part of my Frontend Dev course in which I participate.
 
@@ -63,6 +65,8 @@ Reset button
 - Styled-components
 - create-react-app
 - React Hooks (custom hooks)
+- Using API for exchange rates 
+- Axios 
 
 
 
